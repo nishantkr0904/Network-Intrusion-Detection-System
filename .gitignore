@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtualenv
+venv/
+env/
+.venv/
+
+# IDE/editor
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs and runtime files
+logs/
+*.log
+current_devices.json
+
+# Secrets and env
+.env
+config.json
+
+# MacOS
+.DS_Store
+
+# Egg/build
+build/
+dist/
+*.egg-info/

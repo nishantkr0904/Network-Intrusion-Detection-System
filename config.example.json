@@ -1,0 +1,23 @@
+{
+  "target": "10.1.160.0/19",
+  "scan_interval": 60,
+  "whitelist": [
+    "6A:72:57:84:6D:6D",
+    "8C:44:A5:5E:21:9F"
+  ],
+  "default_gateway": "10.1.191.254",
+  "smtp": {
+    "server": "smtp.gmail.com",
+    "port": 587,
+    "username": "your-email@gmail.com",
+    "password": "<PUT_APP_PASSWORD_IN_.ENV>"
+  },
+  "sms_gateways": {
+    "Airtel_Bihar": "7004613014@airtelmail.com"
+  },
+  "alert_recipients": {
+    "email": "your-email@gmail.com",
+    "sms": "Airtel_Bihar"
+  },
+  "restricted_ports": [22, 23, 3389]
+}

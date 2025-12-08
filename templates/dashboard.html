@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Scanner Dashboard</title>
+    <script>
+    function fetchDevices() {
+        fetch('/api/devices')
+            .then(response => response.json())
+            .then(data => {
+                let output = '<ul>';
+                data.forEach(device => {
+                    output += `<li>${device.ip} - ${device.mac}</li>`;
+                    /*output += `<li>${device.ip} - ${device.mac} - ${device.status} - ${device.manufacturer}</li>`;*/
+
+                });
+                output += '</ul>';
+                document.getElementById('deviceList').innerHTML = output;
+            });
+    }
+    setInterval(fetchDevices, 5000);
+    </script>
+</head>
+<body onload="fetchDevices()">
+    <h1>Active Devices</h1>
+    <div id="deviceList"></div>
+    <!-- Additional sections for historical logs, filters, export options -->
+</body>
+</html>
